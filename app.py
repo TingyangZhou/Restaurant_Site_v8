@@ -276,9 +276,8 @@ def manager():
             return redirect('/table_status')
         elif 'order_list' in request.form:
             return redirect('/order_list')
-
-    if 'view_feedback' in request.args:
-        return redirect('/leave_feedback')
+        elif 'view_feedback' in request.form:
+            return redirect('/leave_feedback')
 
     return render_template('manager.html')
 
