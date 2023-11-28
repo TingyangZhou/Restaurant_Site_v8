@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track Order</title>
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
         /* Add your CSS styles for the tracking bar here */
         .tracking-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #f1f1f1;
             height: 30px;
             position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
         }
 
         .progress-bar {
             background-color: #4caf50;
             height: 100%;
-            width: 50%;  /* Adjust this width based on your order progress */
+            width: calc(50% - 2px);  /* Adjust this width based on your order progress */
             position: absolute;
         }
 
@@ -30,7 +42,7 @@
     </style>
 </head>
 <body>
-    <h1>Your order is getting prepared...</h1>
+    <h1>This is the Track Order page</h1>
 
     <!-- Tracking Bar -->
     <div class="tracking-bar">
