@@ -3,255 +3,261 @@
 	You can use this to set the background color, margins, etc. as shown below
 	*/
 	body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #444444;  /* Optional: Setting a background color */
-        
-      }
+    background-color: #444444;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+  
     
-    .center-container {
-        text-align: center;
-        margin-top: 20px;
-    }
+  }
+
+  
+  /* This is used to make profile picture cropped as a circle */
+  img {
+   
+    width: 300px; 
+    height: 270px;
+    border-radius:50%
+  }
+  
+  /* Formatting for different header levels, if you need them! */
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: Averta, sans-serif;
+    color: #fff;
+    font-size: 56px;
+    line-height: 44px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: Averta, sans-serif;
+    font-size: 22px;
+    line-height: 10px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  
+  /* Formatting for paragraph text */
+  p {
+    margin-bottom: 20px;
+    font-family: Averta, sans-serif;
+    color: #fff;
+    font-size: 22px;
+    line-height: 10px;
+  }
+
+
+
+  /* "a" refers to links, everything below controls the color and behavior of link objects */
+  a {
+    -webkit-transition: border-color 200ms ease, color 200ms ease;
+    transition: border-color 200ms ease, color 200ms ease;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    border-bottom-color: #1d2330;
+    color: #1d2330;
+  }
+  
+  a:focus {
+    border-bottom-color: #1d2330;
+    color: #1d2330;
+  }
+
+  li{
+    color: white;
+    font-family: Averta, sans-serif;
+    font-size: 25px;
+  }
+
+
+
+  /* Anything marked as class="content" will have options below attached */
+  .content {
+    margin-top: 60px;
+  }
+  
+  /* below is special formatting for a custom object, here a social-icon class */
+  .social-icon {
+    margin-top: 60px;
+    padding-right: 25px;
+    float: right;
+    border-bottom: 0px none #000;
+  }
+  
+  /* form settings */
+  form {
+    font-family: Averta, sans-serif;
+    font-size: 22px; 
+    color: #fff;
+  }
+  
+  button {
+    font-family: Averta, sans-serif;
+    font-size: 25px; 
+    color: rgb(5, 5, 5);
+  }
+
+  .button-container{
+    display:flex;
+    justify-content:center;
+
+  }
+  .options-container{
+    display:flex;
+    justify-content:center;
+
+  }
+
+  /* menu link settings */
+  .menu-link {
+    font-family: Averta, sans-serif;
+    font-size:30px;
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 10px;
+    border-bottom: 2px solid white;
+    text-align: left; 
     
-    .button-container {
-        margin-top: 20px;
-    }
-    
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-    
-    .btn-customer {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-    }
-    
-    .btn-staff {
-        background-color: #3498db;
-        color: white;
-        border: none;
-    }
-      
-      /* This is used to make profile picture cropped as a circle */
-      img {
-       
-        width: 300px; 
-        height: 200px;
-      }
-      
-      /* Formatting for different header levels, if you need them! */
-      h1 {
-        margin-top: 20px;
-        margin-bottom: 30px;
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        color: #fff;
-        font-size: 56px;
-        line-height: 44px;
-        font-weight: 700;
-      }
-      
-      h2 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        color: #fff;
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 22px;
-        line-height: 10px;
-        font-style: normal;
-        font-weight: 700;
+  }
+  
+  .login{
+    font-family: Averta, sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    color: #fff;
+  }
 
-      }
-
-      
-      /* Formatting for paragraph text */
-      p {
-        margin-bottom: 20px;
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        color: #fff;
-        font-size: 22px;
-        line-height: 10px;
-      }
-      
-      /* "a" refers to links, everything below controls the color and behavior of link objects */
-      a {
-        -webkit-transition: border-color 200ms ease, color 200ms ease;
-        transition: border-color 200ms ease, color 200ms ease;
-        color: #fff;
-        text-decoration: none;
-      }
-      
-      a:hover {
-        border-bottom-color: #1d2330;
-        color: #1d2330;
-      }
-      
-      a:focus {
-        border-bottom-color: #1d2330;
-        color: #1d2330;
-      }
-
-      li{
-        color: white;
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 20px;
-      }
-
-
-
-      /* Anything marked as class="content" will have options below attached */
-      .content {
-        margin-top: 60px;
-      }
-      
-      /* below is special formatting for a custom object, here a social-icon class */
-      .social-icon {
-        margin-top: 60px;
-        padding-right: 25px;
-        float: right;
-        border-bottom: 0px none #000;
-      }
-      
-      /* form settings */
-      form {
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 22px; 
-        color: #fff;
-      }
-      
-      button {
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 20px; 
-        color: rgb(5, 5, 5);
-      }
-      
-      /* menu link settings */
-      .menu-link {
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size:30px;
-        margin-top: 0px;
-        padding-right: 0px;
-        padding-left: 10px;
-        border-bottom: 2px solid white;
-        text-align: left; 
-        
-      }
-      
-      .login{
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 20px;
-        display: inline-block;
-        color: #fff;
-      }
-
-      .center-container {
-        text-align: center;
-    }
-      .login-container {
-        display: flex;
-        display: inline-block; 
-        align-items: center;
-        width: 300px;
-        padding: 30px;
-        background-color: #ffffff;
-        border-radius: 8px;
-        margin-top:20px; 
-      }
-      .login-form {
-        width: 100%; 
-      }
-      .login-form input[type="text"],
-      .login-form input[type="password"] {
-        width: 92%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px sold #878787;
-        border-radius: i4px;
-      }     
-      .login-form button {
-        width: 100%;
-        padding: 10px;
-        background-color: rgb(221, 17, 17);
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      select {
-        font-size: 20px;
-    }
-     
-
-      .container {
-        display: flex; /* This will lay out the .box children in a row */
-        justify-content: space-between; 
-        margin-top: 10px;
-        height: 300px
-      }
-
-      .tablebox{
-        width: 30%; /* Each box will take up roughly 30% of the container width */
-        margin-bottom: 10px;
-        height: 100%;
-        border: 2px solid white; /* This creates a border around each box */
-        padding: 10px; /* This adds some space inside the boxes */
-        color: white;
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 20px;
+  .center-container {
+    text-align: center;
 }
+  .login-container {
+    display: flex;
+    display: inline-block; 
+    align-items: center;
+    width: 300px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top:20px; 
+  }
+  .login-form {
+    width: 100%; 
+  }
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px sold #878787;
+    border-radius: i4px;
+  }     
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(221, 17, 17);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-      .order_box{
-        width: 45%;
-        height: 80%;
-        margin-bottom: 10px;
-        border: 2px solid white;
-        padding: 10px; 
-        color: white;
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 20px;
-        word-wrap: break-word;
+  select {
+    font-size: 25px;
+}
+ 
 
-      }
+  .container {
+    display: flex; /* This will lay out the .box children in a row */
+    flex-direction:column;
+    justify-content: space-between; 
+    margin-top: 10px;
+    height: 600px;
+    align-items: center;
+  }
 
-      .order_input{
-        width: 100px;
-        height: 20px;
-        font-size: 20px;
-      }
+  .tablebox{
+    width: 30%; /* Each box will take up roughly 30% of the container width */
+    margin-bottom: 10px;
+    height: 100%;
+    border: 2px solid white; /* This creates a border around each box */
+    padding: 10px; /* This adds some space inside the boxes */
+    color: white;
+    font-family: Averta, sans-serif;
+    font-size: 20px;
+  }
 
 
-      .cartbox{
-        width: 45%;
-        height: 100%;
-        margin-bottom: 10px;
-        border: 2px solid white;
-        padding: 10px; 
-        color: white;
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        font-size: 20px;
-      }
+  .menu_box {
+    width: 100%;
+    display: flex; /* Use flex, not inline-block */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    color: black;
+    font-family: Averta, sans-serif;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+    
+  .menu_item {
+  
+    flex-basis: 30%;;
+    margin: 1%;
+    padding:10px;
+    display:flex;
+    box-sizing: border-box; /* includes padding and border in the width */
+    flex-direction:column;
+    align-items: center;
+    margin-bottom:10px;
+  }
 
-      .index-page{
-        background-image: url('/static/images/burger.jpg'), url('/static/images/wings.jpg'),url('/static/images/brownie.jpg');
-        background-repeat: no-repeat, no-repeat, no-repeat;
-        background-attachment: fixed, fixed, fixed;
-        background-size: 30% 48%,27% 48%, 27% 48%;
-        background-position: 5% 85%, 50% 85%, 90% 85%;
-        height: 100vh; /* this sets the height and makes sure the images are at the bottom */
-      }
 
-      .menu-page{
-        background-image: url('/static/images/wings.jpg'),url('/static/images/burger.jpg'), url('/static/images/taco.jpg'), url('/static/images/brownie.jpg'), url('/static/images/chickenSalad.jpg');
-        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat,no-repeat;
-        background-attachment: fixed, fixed, fixed, fixed, fixed;
-        background-size: 27% 40%, 30% 40%, 27% 40%, 27% 40%, 27% 40%;
-        background-position: 5% 90%, 50% 90%, 92% 90%, 5% 15%, 97% 15%;
-      }
+  .order_box{
+    width: 45%;
+    height: 80%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    padding: 10px; 
+    color: black;
+    font-family: Averta, sans-serif;
+    font-size: 20px;
+    word-wrap: break-word;
+
+  }
+
+  .order_input{
+    width: 50px;
+    height: 30px;
+    font-size: 25px;
+  }
+
+
+  .cartbox{
+    width: 45%;
+    height: 100%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    padding: 10px; 
+    color: white;
+    font-family: Averta, sans-serif;
+    font-size: 20px;
+  }
+
+  /* Contents of styles.css */
+
+
+
+  
