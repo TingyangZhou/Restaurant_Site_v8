@@ -3,38 +3,118 @@
 <head>
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
     <title>My Restaurant</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column; /* Stacks flex items from top to bottom */
+            align-items: center; /* Centers flex items horizontally */
+            justify-content: flex-start; /* Aligns items to the top of the container */
+            height: 100%;
+            background-image: url('/static/images/brownie.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            background-position: center 3%; 
+        }
+
+        button {
+            width: 170px;
+            height: 40px;
+            background-color: rgb(243, 243, 226);
+            border-radius: 8px;
+        }
+        
+        
+        #button1 {
+            margin-right: 100px;
+
+            
+        }
+        button:hover {
+            opacity:0.8;
+        }
+
+        #options {    
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #options a {
+       
+            color: black;
+    
+            font-size: 25px;
+        }
+
+        #options a:hover{
+            opacity:0.8;
+        }
+
+        .options-container {
+            background: rgba(239, 236, 236, 0.8); 
+            border-radius: 50%;
+            margin-top: 22px;
+            padding-top:2px;
+            padding-bottom:2px;
+            width: 30%;
+        }       
+
+        h1 {
+            color:black;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        #options li {
+            color: black;
+            padding: 5px 0;
+            margin-top:0;
+            margin-top:0;
+        }
+
+        
+    </style>
+    
+  
 </head>
 <body class = "index-page">
   
-    <h1>Welcome to DineHUB</h1>
+    <h1>Welcome to My Restaurant</h1>
+    <div class = "button-container">
+        <button id="button1">Customer</button>
+        <button id="button2">Staff Log-In</button>
+    </div>
 
-    <h2>Buttons:</h2>
-    <button id="button1">Place Order</button>
-    <button id="button2">Staff Log-In</button>
-
-    <h2>Options:</h2>
-    <ul id="options">
-        {% for option in button_data['button1'] %}
-            <li><a href="{{ option['url'] }}">{{ option['text'] }}</a></li>
-        {% endfor %}
-    </ul>
-
-    <script>
-        document.getElementById('button1').addEventListener('click', function() {
-            var options = document.getElementById('options');
-            options.innerHTML = '';
+    <div class = "options-container">
+        <ul id="options">
             {% for option in button_data['button1'] %}
-                options.innerHTML += "<li><a href='{{ option['url'] }}'>{{ option['text'] }}</a></li>";
+                <li><a href="{{ option['url'] }}">{{ option['text'] }}</a></li>
             {% endfor %}
-        });
+        </ul>
+    </div>
 
-        document.getElementById('button2').addEventListener('click', function() {
-            var options = document.getElementById('options');
-            options.innerHTML = '';
-            {% for option in button_data['button2'] %}
-                options.innerHTML += "<li><a href='{{ option['url'] }}'>{{ option['text'] }}</a></li>";
-            {% endfor %}
-        });
-    </script>
+        <script>
+            document.getElementById('button1').addEventListener('click', function() {
+                var options = document.getElementById('options');
+                options.innerHTML = '';
+                {% for option in button_data['button1'] %}
+                    options.innerHTML += "<li><a href='{{ option['url'] }}'>{{ option['text'] }}</a></li>";
+                {% endfor %}
+            });
+
+            document.getElementById('button2').addEventListener('click', function() {
+                var options = document.getElementById('options');
+                options.innerHTML = '';
+                {% for option in button_data['button2'] %}
+                    options.innerHTML += "<li><a href='{{ option['url'] }}'>{{ option['text'] }}</a></li>";
+                {% endfor %}
+            });
+        </script>
+    
+
+    
+
 </body>
 </html>
